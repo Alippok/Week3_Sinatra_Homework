@@ -6,10 +6,21 @@ require_relative('../models/bookmark.rb')
 class TestBookmark < MiniTest::Test 
 
   def setup
-  
+    params = {
+      "url" => "google.com",
+      "title" => "Google",
+      "genre" => "search engine",
+      "details" => "A search engine"
+    }  
+
+    @bookmark = Bookmark.new(params)
+
   end
-
-
+  
+  def test_url
+    assert_equal("www.google.com", @bookmark.url)
+  end
+  
 
 
 
