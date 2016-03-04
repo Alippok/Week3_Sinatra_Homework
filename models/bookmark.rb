@@ -25,6 +25,40 @@ class Bookmark
     return @genre.capitalize
   end
 
+  def details
+    return @details.capitalize
+  end
+
+  def save
+    sql = "INSERT INTO bookmarks(
+    url,
+    title,
+    genre,
+    details)
+    VALUES(
+    '#{@url}',
+    '#{@title}',
+    '#{@genre}',
+    '#{@details}')
+    "
+    Bookmark.run_sql(sql)
+  end
+
+
+
+
+
+  private
+
+  def self.run_sql(sql)
+    begin
+      db = PG.connect({ dbname: "bookmark_app", host: "localhost"})
+      result = db.exec(sql)
+      return result
+    ensure
+      db.close
+    end
+  end
 
 
 end 

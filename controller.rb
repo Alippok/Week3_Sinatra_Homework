@@ -13,3 +13,8 @@ get'/bookmarker/new' do
   erb(:new)
 end
 
+post '/bookmarker' do
+  @bookmark = Bookmark.new(params)
+  @bookmark.save()
+  redirect to ('/bookmarker')
+end
