@@ -10,7 +10,7 @@ class TestBookmark < MiniTest::Test
       "url" => "google.com",
       "title" => "google",
       "genre" => "search engine",
-      "details" => "A search engine"
+      "details" => "a search engine"
     }  
 
     @bookmark = Bookmark.new(params)
@@ -27,6 +27,10 @@ class TestBookmark < MiniTest::Test
 
   def test_genre
     assert_equal("Search engine", @bookmark.genre)
+  end
+
+  def test_details
+    assert_equal("A search engine", @bookmark.details)
   end
 
 
