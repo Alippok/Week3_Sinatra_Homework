@@ -21,6 +21,9 @@ class Bookmark
     return @title.capitalize
   end
 
+  def genre
+    return @genre.capitalize
+  end
 
 
 

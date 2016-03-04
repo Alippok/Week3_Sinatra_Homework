@@ -25,8 +25,9 @@ class TestBookmark < MiniTest::Test
     assert_equal("Google", @bookmark.title)
   end
 
-
-
+  def test_genre
+    assert_equal("Search engine", @bookmark.genre)
+  end
 
 
 
