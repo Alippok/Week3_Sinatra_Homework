@@ -51,7 +51,13 @@ class Bookmark
     return bookmarks
   end
 
-
+  def self.find(title)
+    sql = "SELECT * from bookmarks WHERE title = '#{title.capitalize}'"
+    result = Bookmark.run_sql(sql)
+    bookmarks = result.map{|bookmark| Bookmark.new(bookmark)}
+    return bookmarks[0]
+  end
+  
 
   private
 

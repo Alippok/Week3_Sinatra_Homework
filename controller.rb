@@ -29,6 +29,11 @@ end
 
 
 #SHOW
+get '/bookmarker/:id' do 
+  @bookmark = Bookmark.find(params["id"])
+  erb(:show)
+end
+
 
 
 #EDIT
