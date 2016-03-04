@@ -44,7 +44,12 @@ class Bookmark
     Bookmark.run_sql(sql)
   end
 
-
+  def self.all
+    sql = "SELECT * from bookmarks"
+    result = Bookmark.run_sql(sql)
+    bookmarks = result.map{|bookmark| Bookmark.new(bookmark)}
+    return bookmarks
+  end
 
 
 
