@@ -8,7 +8,7 @@ class TestBookmark < MiniTest::Test
   def setup
     params = {
       "url" => "google.com",
-      "title" => "Google",
+      "title" => "google",
       "genre" => "search engine",
       "details" => "A search engine"
     }  
@@ -21,6 +21,9 @@ class TestBookmark < MiniTest::Test
     assert_equal("www.google.com", @bookmark.url)
   end
   
+  def test_title
+    assert_equal("Google", @bookmark.title)
+  end
 
 
 

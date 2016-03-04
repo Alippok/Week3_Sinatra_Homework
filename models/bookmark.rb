@@ -13,10 +13,13 @@ class Bookmark
     if @url.start_with?("www.")
       return @url
     else
-    return "www.".concat(@url)
+      return "www.".concat(@url)
     end
   end
 
+  def title
+    return @title.capitalize
+  end
 
 
 
