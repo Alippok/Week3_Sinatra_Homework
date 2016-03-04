@@ -5,7 +5,7 @@ require('pg')
 require_relative('./models/bookmark.rb')
 
 
-get '/bookmarker' do
+get '/' do
   erb(:home)
 end
 
@@ -21,8 +21,8 @@ post '/bookmarker' do
   redirect to ('/bookmarker')
 end
 
-#VIEW
-get '/bookmarker/all' do
+#INDEX
+get '/bookmarker' do
   @bookmarks = Bookmark.all
   erb(:index)
 end
@@ -37,14 +37,15 @@ end
 
 #EDIT
 get '/bookmarker/:id/edit' do
-@bookmarker = Bookmark.find(params["id"])
-erb(:edit)
+  @bookmark = Bookmark.find(params["id"])
+  erb(:edit)
 end
 
 
 #UPDATE
-post '/bookmarker/update' do
- 
+post '/bookmarker/:id' do
+  Bookmark.update( params )
+  erb(:home)
 end
 
 #DESTROY

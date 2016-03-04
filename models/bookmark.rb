@@ -1,8 +1,9 @@
 require('pg')
 
 class Bookmark
-  attr_reader(:url, :title, :genre, :details)
+  attr_reader(:id, :url, :title, :genre, :details)
   def initialize(params)
+    @id = nil || params["id"].to_i
     @url = params["url"]
     @title = params["title"]
     @genre = params["genre"]
@@ -51,11 +52,22 @@ class Bookmark
     return bookmarks
   end
 
-  def self.find(title)
-    sql = "SELECT * from bookmarks WHERE title = '#{title.capitalize}'"
+  def self.find(id)
+    sql = "SELECT * from bookmarks WHERE id='#{id}'"
     result = Bookmark.run_sql(sql)
     bookmarks = result.map{|bookmark| Bookmark.new(bookmark)}
     return bookmarks[0]
+  end
+
+  def self.update(params)
+    sql = "UPDATE bookmarks SET
+    url='#{params['url']}',
+    title='#{params['title']}',
+    genre='#{params['genre']}',
+    details='#{params['details']}'
+    WHERE id='#{params['id']}'"
+    
+    Bookmark.run_sql(sql)
   end
   
 
