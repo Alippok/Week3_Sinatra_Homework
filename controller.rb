@@ -35,13 +35,16 @@ get '/bookmarker/:id' do
 end
 
 
-
 #EDIT
-
-
+get '/bookmarker/:id/edit' do
+@bookmarker = Bookmark.find(params["id"])
+erb(:edit)
+end
 
 
 #UPDATE
-
+post '/bookmarker/update' do
+ 
+end
 
 #DESTROY
