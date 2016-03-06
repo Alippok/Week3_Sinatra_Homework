@@ -70,6 +70,11 @@ class Bookmark
     Bookmark.run_sql(sql)
   end
   
+  def self.delete(id)
+    sql = "DELETE FROM bookmarks where id= #{id}"
+    Bookmark.run_sql(sql)
+  end
+
 
   private
 

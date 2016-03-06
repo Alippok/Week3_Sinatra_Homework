@@ -49,3 +49,7 @@ post '/bookmarker/:id' do
 end
 
 #DESTROY
+post '/bookmarker/:id/delete' do
+  Bookmark.delete(params["id"])
+  redirect to ('/')
+end

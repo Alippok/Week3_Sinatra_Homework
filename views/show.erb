@@ -1,7 +1,7 @@
 <div class="individual_bmk">
 
   <b>URL:</b>
-  <p><a href="#{@bookmark.url}"><%= @bookmark.url %></a></p>
+  <p><a href="https://<%=@bookmark.url%>/"><%= @bookmark.url %></a></p>
 
   <b>Title:</b>
   <p><%= @bookmark.title %></p>
@@ -12,6 +12,7 @@
   <b>Details:</b>
   <p><%= @bookmark.details %></p>
 
-  <a href="/bookmarker/<%= @bookmark.id %>/edit"><button type="submit" >Edit my bookmark</button></a>
+  <a href="/bookmarker/<%= @bookmark.id %>/edit"><button type="submit" >Edit my BookMark</button></a>
+  <form action="/bookmarker/<%= @bookmark.id %>/delete" method="post"><button type="submit">Delete my BookMark</button></form>
 
 </div>
