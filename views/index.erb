@@ -1,21 +1,22 @@
 <h1>My Bookmarks</h1>
 <div class="index">
+<% index = 1 %>
 <% @bookmarks.each do |bookmark| %>
-
-  <b>URL:</b>
+<div class="index_item">
+  <h3>BookMark <%=index%></h3>
+  <div class="item_details">
+  <h3>URL:</h3>
   <p> <%= bookmark.url %> </p>
+  </div>
 
-  <b>Title:</b>
+  <div class="item_details">
+  <h3>Title:</h3>
   <p> <%= bookmark.title %> </p>
+  </div>
 
-  <b>Genre:</b>
-  <p> <%= bookmark.genre %> </p>
-
-  <b>Details:</b>
-  <p> <%= bookmark.details %></p>
   <a href="/bookmarker/<%= bookmark.id %>"><button type="submit">View BookMark</button></a>
   <br>
-
+</div>
+<% index+=1 %>
 <% end %>
-<a href="/"><button type="submit">Home</button></a>
 </div>

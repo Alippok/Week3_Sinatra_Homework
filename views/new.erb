@@ -1,13 +1,13 @@
-<form action="/bookmarker" method="post">
+<form action="/bookmarker" method="post" id="create_new_bmk">
   <legend>Create a bookmark</legend>
     <label>URL:</label>
-    <input type="text" name="url">
+    <input type="text" name="url" required>
     <label>Title:</label>
-    <input type="text" name="title">
+    <input type="text" name="title" required>
     <label>Genre:</label>
-    <input type="text" name="genre">
+    <input type="text" name="genre" required>
     <label>Details:</label>
-    <input type="text" name="details">
+    <input type="text" name="details" required>
 
     <button type="submit">Place my bookmark</button>
 
