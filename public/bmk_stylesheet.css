@@ -15,7 +15,7 @@ header{
   font-size:5vw;
   mix-blend-mode:darken;
 }
-header img{
+#logo{
   width:5%;
   height:90%;
   padding:0px;
@@ -24,8 +24,14 @@ header img{
   background-color:white;
   border-radius:10px;
   margin-left:2px;
+  transition:all 1s ease;
 }
-
+#logo:hover{
+  background-color:#f54123;
+}
+#logo:active{
+  background-color: #37bbe4;
+}
 .option_holder a{
   text-decoration:none;
 }
@@ -43,6 +49,7 @@ header img{
   }
 #create{
   display:block;
+  background-color: white;
   height:100px;
   width:2%;
   overflow:hidden;
@@ -56,6 +63,7 @@ header img{
 }
 #index{
   display:block;
+  background-color: white;
   height:100px;
   width:2%;
   overflow:hidden;
@@ -72,13 +80,25 @@ header img{
   color:black;
   font-weight: 600;
   text-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 20px 10px #f54123;
  }
+ #create:active{
+  outline:none;
+  box-shadow: 0px 0px 20px 10px #37bbe4;
+}
  #index:hover{
   width:50%;
   color:black;
   font-weight: 600;
   text-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 20px 10px #f54123;
  }
+  #index:active{
+   outline:none;
+   box-shadow: 0px 0px 20px 10px #37bbe4;
+ }
+
+
 
 #create_new_bmk{
   position:relative;
@@ -119,8 +139,8 @@ header img{
 #create_new_bmk input:focus{
   border-radius:10px;
   outline-color:#37bbe4;
-  outline-width:20px;
-  background-color:#37bbe4;
+  outline-width:10px;
+  background-color: rgba(55,187,228,1);
 }
 #create_new_bmk button{
   position:relative;
@@ -135,13 +155,20 @@ header img{
   font-weight: 600;
   transition: 1s ease all;
 }
-#create_new_bmk button:active{
+#create_new_bmk button:hover{
   box-shadow: 0px 0px 20px 10px #f54123;
+}
+#create_new_bmk button:active{
+  box-shadow: 0px 0px 20px 10px #37bbe4;
   outline:none;
 }
 #create_new_bmk:hover{
   height:550px
 }
+
+
+
+
 .index{
   height:auto;
   width:100%;
@@ -153,6 +180,7 @@ header img{
   width:12%;
   height:20px;
   margin-left:5%;
+  margin-bottom: 100px;
   border-radius:10px;
   text-align:center;
   transition:all 1s ease;
@@ -184,7 +212,69 @@ width:20%;
   font-weight: 600;
   transition: 1s ease all;
 }
+.index_item button:hover{
+ box-shadow: 0px 0px 20px 10px #f54123;
+ outline:none;
+}
 .index_item button:active{
+  box-shadow: 0px 0px 20px 10px #37bbe4;
+  outline:none;
+}
+
+
+
+
+
+.individual_bmk{
+  position:relative;
+  left:30%;
+  top:20px;
+  background-color:rgba(0,0,0,0.9);
+  width:30%;
+  padding-left:5px;
+  padding-right:5px;
+  padding-bottom:10px;
+  margin-left:5%;
+  border-radius:10px;
+  text-align:center;
+  transition:all 1s ease;
+  }
+.individual_bmk h3{
+  color:white;
+  margin-bottom: -5px
+}
+.individual_bmk p{
+  color:white;
+  margin-bottom:50px;
+}
+
+.individual_bmk a{
+text-decoration:none;
+color:white;
+transition:all 1s ease;
+}
+.individual_bmk a:hover{
+  text-shadow:0px 0px 10px #f54123;
+  font-size:2vw;
+}
+.individual_bmk a:active{
+  text-shadow:0px 0px 10px #37bbe4;
+}
+
+.individual_bmk button{
+  margin-bottom:20px;
+  border-radius:10px;
+  border:none;
+  background-color:white;
+  box-shadow: 0px 0px 20px 10px #37bbe4 ;
+  font-size:1vw;
+  font-weight: 600;
+  transition: 1s ease all;
+}
+.individual_bmk button:hover{
+ box-shadow: 0px 0px 20px 10px #f54123
+}
+.individual_bmk button:active{
  box-shadow: 0px 0px 20px 10px #f54123;
  outline:none;
 }
