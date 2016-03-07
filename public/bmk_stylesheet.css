@@ -278,3 +278,69 @@ transition:all 1s ease;
  box-shadow: 0px 0px 20px 10px #f54123;
  outline:none;
 }
+
+#edit_bmk{
+  position:relative;
+  left:25%;
+  top:6px;
+  overflow:hidden;
+  padding:10px;
+  background-color:rgba(0,0,0,0.9);
+  mix-blend-mode:darken;
+  width:50%;
+  border-radius:5px;
+  height:50px;
+  transition:all 1s ease;
+}
+#edit_bmk legend{
+  display:block;
+  margin-left:12%;
+  margin-bottom:5%;
+  font-size:4vw;
+  color:#fff;
+}
+#edit_bmk label, input{
+  display:block;
+  position:relative;
+  left:30%;
+
+}
+#edit_bmk label{
+  color:white;
+  font-size:2vw;
+
+}
+#edit_bmk input{
+  margin-bottom:20px;
+  font-size:2vw;
+  border:1px solid black;
+}
+#edit_bmk input:focus{
+  border-radius:10px;
+  outline-color:#37bbe4;
+  outline-width:10px;
+  background-color: rgba(55,187,228,1);
+}
+#edit_bmk button{
+  position:relative;
+  left:32%;
+  height:50px;
+  margin-top:25px;
+  border-radius:10px;
+  border:none;
+  box-shadow: 0px 0px 20px 10px #37bbe4 ;
+  background-color:white;
+  font-size:2vw;
+  font-weight: 600;
+  transition: 1s ease all;
+}
+#edit_bmk button:hover{
+  box-shadow: 0px 0px 20px 10px #f54123;
+}
+#edit_bmk button:active{
+  box-shadow: 0px 0px 20px 10px #37bbe4;
+  outline:none;
+}
+#edit_bmk:hover{
+  height:550px
+}
